@@ -28,9 +28,9 @@
     <li><a href="/servicii/depozitare-si-logistica/">Depozitare și logistică</a></li>
   </menu>
 </div>
-<a href="/comanda-oferta/">Ofertă</a>
+<a href="#oferta">Ofertă</a>
 <a href="/contact/">Contact</a>
-<a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+<a class="btn" href="#oferta">Cere o ofertă</a>
 </nav>
   </div>
 </header>
@@ -48,7 +48,7 @@
       <li>În toată țara, dar și pe teritoriul Uniunii Europene</li>
     </ul>
     <div class="hero-actions reveal d4">
-      <a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+      <a class="btn" href="#oferta">Cere o ofertă</a>
       <a class="btn ghost" href="tel:+40740099080" style="color:white;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)">+40 740 099 080</a>
       <a class="btn ghost" href="tel:+40741035347" style="color:white;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)">+40 741 035 347</a>
       <a class="btn ghost" href="tel:+40754048794" style="color:white;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)">+40 754 048 794</a>
@@ -64,26 +64,62 @@
     <p class="eyebrow">Ce facem</p>
     <h2>Patru servicii, același standard.</h2>
     <div class="services">
-      <a class="service inview" href="/servicii/transport-autoturisme/">
-        <img src="/assets/img/fleet-snow.jpg" alt="Transport autoturisme pe platformă">
-        <div><h3>Transport autoturisme</h3><p>De la o singură mașină până la loturi de 8–10 unități, din și spre Europa.</p></div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="service inview" href="/servicii/transport-marfuri/">
-        <img src="/assets/img/pallet.jpg" alt="Transport mărfuri paletate">
-        <div><h3>Transport mărfuri</h3><p>Marfă asigurată, flotă urmărită GPS, șoferi profesioniști.</p></div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="service inview" href="/servicii/intermediere-transport-marfuri-si-autoturisme/">
-        <img src="/assets/img/courier.jpg" alt="Intermediere transport">
-        <div><h3>Intermediere</h3><p>Cea mai potrivită soluție prin rețeaua de parteneri, cu asigurare.</p></div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="service inview" href="/servicii/depozitare-si-logistica/">
-        <img src="/assets/img/yard.jpg" alt="Depozitare autoturisme">
-        <div><h3>Depozitare și logistică</h3><p>Sediu în centrul țării, pentru marfă și autoturisme între transporturi.</p></div>
-        <span class="arrow">→</span>
-      </a>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/fleet-snow.jpg" alt="Transport autoturisme pe platformă">
+          <div><h3>Transport autoturisme</h3><p>De la o singură mașină până la loturi de 8–10 unități, din și spre Europa.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </summary>
+        <div class="service-more"><div class="service-panel"><div class="service-panel-inner">
+          <div>
+            <p>Transportul pe platformă se face în siguranță, cu structuri profesionale pentru până la 10 autoturisme odată.</p>
+            <p>Onorăm comenzi pentru o singură mașină, dar și loturi complete de 8–10 unități, de oriunde din Europa.</p>
+          </div>
+          <a class="btn" href="#oferta" data-serviciu="Transport autoturisme">Cere o ofertă</a>
+        </div></div></div>
+      </details>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/pallet.jpg" alt="Transport mărfuri paletate">
+          <div><h3>Transport mărfuri</h3><p>Marfă asigurată, flotă urmărită GPS, șoferi profesioniști.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </summary>
+        <div class="service-more"><div class="service-panel"><div class="service-panel-inner">
+          <div>
+            <p>Flotă modernă, întreținere tehnică periodică, șoferi profesioniști și urmărire GPS pe tot traseul.</p>
+            <p>Toate mărfurile transportate sunt asigurate.</p>
+          </div>
+          <a class="btn" href="#oferta" data-serviciu="Transport mărfuri">Cere o ofertă</a>
+        </div></div></div>
+      </details>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/courier.jpg" alt="Intermediere transport">
+          <div><h3>Intermediere</h3><p>Cea mai potrivită soluție prin rețeaua de parteneri, cu asigurare.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </summary>
+        <div class="service-more"><div class="service-panel"><div class="service-panel-inner">
+          <div>
+            <p>Prin rețeaua de parteneri găsim varianta sigură, rapidă și potrivită ca preț.</p>
+            <p>Marfa sau autovehiculul intermediat este asigurat prin polița societății.</p>
+          </div>
+          <a class="btn" href="#oferta" data-serviciu="Intermediere transport mărfuri și autoturisme">Cere o ofertă</a>
+        </div></div></div>
+      </details>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/yard.jpg" alt="Depozitare autoturisme">
+          <div><h3>Depozitare și logistică</h3><p>Sediu în centrul țării, pentru marfă și autoturisme între transporturi.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </summary>
+        <div class="service-more"><div class="service-panel"><div class="service-panel-inner">
+          <div>
+            <p>Sediul din Sibiu poate găzdui marfa și autoturismul până la următorul transport.</p>
+            <p>Pentru mașini, pe durata depozitării verificăm și întreținem acumulatorul.</p>
+          </div>
+          <a class="btn" href="#oferta" data-serviciu="Depozitare logistica">Cere o ofertă</a>
+        </div></div></div>
+      </details>
     </div>
   </div>
 </section>
@@ -105,7 +141,7 @@
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="stats">
-      <div class="stat inview"><b data-count="2001">0</b><span>anul înființării</span></div>
+      <div class="stat inview"><b data-since="2001-08">0</b><span>ani de activitate în transporturi</span></div>
       <div class="stat inview"><b data-count="110">0</b><span>angajați</span></div>
       <div class="stat inview"><b data-count="14">0</b><span>țări pe rute regulate</span></div>
       <div class="stat inview"><b data-count="10">0</b><span>autoturisme pe platformă</span></div>
@@ -170,6 +206,58 @@
       <p><a href="tel:+40740099080">+40 740 099 080</a><br><a href="tel:+40741035347">+40 741 035 347</a><br><a href="tel:+40754048794">+40 754 048 794</a><br><a href="mailto:office@gistransporturi.ro">office@gistransporturi.ro</a><br>Sibiu, Str. Anul 1848 nr. 17, județul Sibiu</p>
       <a class="btn" href="/contact/">Scrie-ne</a>
     </div>
+  </div>
+</section>
+<section class="section" id="oferta">
+  <div class="wrap" style="max-width:760px">
+    <p class="eyebrow">Comandă</p>
+    <h2>Cere o ofertă</h2>
+    <p>Răspundem în cel mai scurt timp, luni–vineri, 08:00–16:00.</p>
+    <form class="form" data-service-form>
+      <p class="form-ok">Cererea a fost trimisă. Revenim în cel mai scurt timp.</p>
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <label>Nume<input name="nume" required></label>
+        <label>Prenume<input name="prenume" required></label>
+      </div>
+      <div class="row">
+        <label>Telefon<input name="telefon" required></label>
+        <label>Email<input type="email" name="email"></label>
+      </div>
+      <label>Nume societate<input name="societate"></label>
+      <label>Cu ce servicii vă putem ajuta?
+        <select name="serviciu" required>
+          <option value="">Alege</option>
+          <option>Transport mărfuri</option>
+          <option>Transport autoturisme</option>
+          <option>Intermediere transport mărfuri și autoturisme</option>
+          <option>Depozitare logistica</option>
+        </select>
+      </label>
+      <div class="row">
+        <label>Locația încărcării<input name="incarcare"></label>
+        <label>Locația descărcării<input name="descarcare"></label>
+      </div>
+      <div data-for="auto" hidden>
+        <div class="row">
+          <label>Modelul autoturismului<input name="model"></label>
+          <label>Număr de autoturisme<input name="numar_auto"></label>
+        </div>
+        <label>Starea autoturismului
+          <select name="stare"><option value="">Alege</option><option>funcțional</option><option>nefuncțional</option></select>
+        </label>
+      </div>
+      <div data-for="marfa" hidden>
+        <div class="row">
+          <label>Număr de paleți<input name="paleti"></label>
+          <label>Volumul paleților<input name="volum"></label>
+        </div>
+        <label>Greutatea paleților<input name="greutate"></label>
+      </div>
+      <label>Mesaj<textarea name="mesaj" required></textarea></label>
+      <label class="checkline"><input type="checkbox" required> Prin trimiterea acestui formular ne dați consimțământul pentru folosirea datelor furnizate pentru a vă contacta. Datele nu vor fi folosite în alte scopuri. <a href="/declaratie-privind-datele-cu-caracter-personal/">Informare privind datele cu caracter personal</a>.</label>
+      <button class="btn" type="submit">Trimite cererea</button>
+    </form>
   </div>
 </section>
 

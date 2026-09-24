@@ -203,26 +203,54 @@ HOME = """
     <p class="eyebrow">Ce facem</p>
     <h2>Patru servicii, același standard.</h2>
     <div class="services">
-      <a class="service inview" href="/servicii/transport-autoturisme/">
-        <img src="/assets/img/fleet-snow.jpg" alt="Transport autoturisme pe platformă">
-        <div><h3>Transport autoturisme</h3><p>De la o singură mașină până la loturi de 8–10 unități, din și spre Europa.</p></div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="service inview" href="/servicii/transport-marfuri/">
-        <img src="/assets/img/pallet.jpg" alt="Transport mărfuri paletate">
-        <div><h3>Transport mărfuri</h3><p>Marfă asigurată, flotă urmărită GPS, șoferi profesioniști.</p></div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="service inview" href="/servicii/intermediere-transport-marfuri-si-autoturisme/">
-        <img src="/assets/img/courier.jpg" alt="Intermediere transport">
-        <div><h3>Intermediere</h3><p>Cea mai potrivită soluție prin rețeaua de parteneri, cu asigurare.</p></div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="service inview" href="/servicii/depozitare-si-logistica/">
-        <img src="/assets/img/yard.jpg" alt="Depozitare autoturisme">
-        <div><h3>Depozitare și logistică</h3><p>Sediu în centrul țării, pentru marfă și autoturisme între transporturi.</p></div>
-        <span class="arrow">→</span>
-      </a>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/fleet-snow.jpg" alt="Transport autoturisme pe platformă">
+          <div><h3>Transport autoturisme</h3><p>De la o singură mașină până la loturi de 8–10 unități, din și spre Europa.</p></div>
+          <span class="arrow">→</span>
+        </summary>
+        <div class="service-more">
+          <p>Oferim servicii de transport mașini din și înspre Europa. Transportul pe platformă se face în siguranță, cu structuri profesionale pentru până la 10 autoturisme odată.</p>
+          <p>Putem onora comenzi pentru o singură mașină, dar și loturi complete de 8–10 unități, de oriunde din Europa.</p>
+          <a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+        </div>
+      </details>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/pallet.jpg" alt="Transport mărfuri paletate">
+          <div><h3>Transport mărfuri</h3><p>Marfă asigurată, flotă urmărită GPS, șoferi profesioniști.</p></div>
+          <span class="arrow">→</span>
+        </summary>
+        <div class="service-more">
+          <p>Oferim soluții pentru afacerea dvs. cu o flotă modernă, întreținere tehnică periodică, șoferi profesioniști, urmărire prin satelit GPS și alerte de securitate către echipa noastră.</p>
+          <p>Toate mărfurile transportate sunt asigurate.</p>
+          <a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+        </div>
+      </details>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/courier.jpg" alt="Intermediere transport">
+          <div><h3>Intermediere</h3><p>Cea mai potrivită soluție prin rețeaua de parteneri, cu asigurare.</p></div>
+          <span class="arrow">→</span>
+        </summary>
+        <div class="service-more">
+          <p>Oferim intermediere pentru transportul de mărfuri și de autoturisme. Prin rețeaua de parteneri găsim varianta sigură, rapidă și potrivită ca preț.</p>
+          <p>Orice marfă sau autovehicul intermediat este asigurat prin polița societății pentru această activitate.</p>
+          <a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+        </div>
+      </details>
+      <details class="service inview">
+        <summary>
+          <img src="/assets/img/yard.jpg" alt="Depozitare autoturisme">
+          <div><h3>Depozitare și logistică</h3><p>Sediu în centrul țării, pentru marfă și autoturisme între transporturi.</p></div>
+          <span class="arrow">→</span>
+        </summary>
+        <div class="service-more">
+          <p>Sediul din Sibiu, în centrul țării, poate găzdui atât marfa, cât și autoturismul, până la următorul transport.</p>
+          <p>Pentru autoturisme, pe perioada depozitării oferim verificare și întreținere, ca să păstrăm tensiunea optimă a acumulatorului.</p>
+          <a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -244,7 +272,7 @@ HOME = """
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="stats">
-      <div class="stat inview"><b data-count="2001">0</b><span>anul înființării</span></div>
+      <div class="stat inview"><b data-since="2001-08">0</b><span>ani de activitate în transporturi</span></div>
       <div class="stat inview"><b data-count="110">0</b><span>angajați</span></div>
       <div class="stat inview"><b data-count="14">0</b><span>țări pe rute regulate</span></div>
       <div class="stat inview"><b data-count="10">0</b><span>autoturisme pe platformă</span></div>
@@ -346,10 +374,22 @@ SERVICES = """
   <p class="lead" style="max-width:640px">Ne angajăm să vă oferim soluții flexibile și suport profesionist pe întregul flux al transporturilor mărfurilor dumneavoastră.</p>
 </div></section>
 <section class="section" style="padding-top:0"><div class="wrap services">
-  <a class="service" href="/servicii/transport-autoturisme/"><img src="/assets/img/fleet-snow.jpg" alt=""><div><h3>Transport autoturisme</h3><p>Platforme pentru 1 până la 10 autoturisme, intern și în Europa.</p></div><span class="arrow">→</span></a>
-  <a class="service" href="/servicii/transport-marfuri/"><img src="/assets/img/pallet.jpg" alt=""><div><h3>Transport mărfuri generale</h3><p>Flotă modernă, întreținere periodică, urmărire prin satelit.</p></div><span class="arrow">→</span></a>
-  <a class="service" href="/servicii/intermediere-transport-marfuri-si-autoturisme/"><img src="/assets/img/courier.jpg" alt=""><div><h3>Intermediere transport mărfuri și autoturisme</h3><p>Rețeaua de parteneri, cu asigurarea societății.</p></div><span class="arrow">→</span></a>
-  <a class="service" href="/servicii/depozitare-si-logistica/"><img src="/assets/img/yard.jpg" alt=""><div><h3>Depozitare și logistică</h3><p>Autoturisme și mărfuri, în Sibiu, între curse.</p></div><span class="arrow">→</span></a>
+  <details class="service">
+    <summary><img src="/assets/img/fleet-snow.jpg" alt=""><div><h3>Transport autoturisme</h3><p>Platforme pentru 1 până la 10 autoturisme, intern și în Europa.</p></div><span class="arrow">→</span></summary>
+    <div class="service-more"><p>Transport pe platformă, de la o singură mașină până la loturi de 8–10 unități, din și spre Europa.</p><a class="btn" href="/comanda-oferta/">Cere o ofertă</a></div>
+  </details>
+  <details class="service">
+    <summary><img src="/assets/img/pallet.jpg" alt=""><div><h3>Transport mărfuri generale</h3><p>Flotă modernă, întreținere periodică, urmărire prin satelit.</p></div><span class="arrow">→</span></summary>
+    <div class="service-more"><p>Marfă asigurată, șoferi profesioniști și urmărire GPS pe tot parcursul cursei.</p><a class="btn" href="/comanda-oferta/">Cere o ofertă</a></div>
+  </details>
+  <details class="service">
+    <summary><img src="/assets/img/courier.jpg" alt=""><div><h3>Intermediere transport mărfuri și autoturisme</h3><p>Rețeaua de parteneri, cu asigurarea societății.</p></div><span class="arrow">→</span></summary>
+    <div class="service-more"><p>Găsim soluția sigură, rapidă și potrivită ca preț. Transportul intermediat este asigurat.</p><a class="btn" href="/comanda-oferta/">Cere o ofertă</a></div>
+  </details>
+  <details class="service">
+    <summary><img src="/assets/img/yard.jpg" alt=""><div><h3>Depozitare și logistică</h3><p>Autoturisme și mărfuri, în Sibiu, între curse.</p></div><span class="arrow">→</span></summary>
+    <div class="service-more"><p>Găzduim marfa și autoturismul în Sibiu. Pentru mașini, verificăm și acumulatorul pe perioada depozitării.</p><a class="btn" href="/comanda-oferta/">Cere o ofertă</a></div>
+  </details>
 </div></section>
 <section class="section" style="padding-top:0"><div class="wrap split">
   <div class="prose">

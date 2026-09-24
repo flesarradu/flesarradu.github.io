@@ -11,6 +11,15 @@ toggle?.addEventListener("click", () => {
   toggle.setAttribute("aria-expanded", String(open));
 });
 
+document.querySelectorAll(".service").forEach((card) => {
+  card.addEventListener("toggle", () => {
+    if (!card.open) return;
+    document.querySelectorAll(".service").forEach((other) => {
+      if (other !== card) other.open = false;
+    });
+  });
+});
+
 document.querySelectorAll(".inview").forEach((el) => {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -21,6 +30,14 @@ document.querySelectorAll(".inview").forEach((el) => {
     });
   }, { threshold: 0.18 });
   io.observe(el);
+});
+
+document.querySelectorAll("[data-since]").forEach((el) => {
+  const [year, month] = el.dataset.since.split("-").map(Number);
+  const now = new Date();
+  let years = now.getFullYear() - year;
+  if (now.getMonth() + 1 < month) years -= 1;
+  el.dataset.count = String(Math.max(years, 0));
 });
 
 document.querySelectorAll("[data-count]").forEach((el) => {
@@ -37,6 +54,43 @@ document.querySelectorAll("[data-count]").forEach((el) => {
     io.disconnect();
   }, { threshold: 0.6 });
   io.observe(el);
+});
+
+function glideToOffer(service) {
+  const target = document.getElementById("oferta");
+  if (!target) return false;
+  const select = target.querySelector("[name=serviciu]");
+  if (select && service) {
+    select.value = service;
+    select.dispatchEvent(new Event("change"));
+  }
+  target.classList.remove("arrive");
+  document.documentElement.style.scrollBehavior = "auto";
+  const start = window.scrollY;
+  const end = target.getBoundingClientRect().top + start - 88;
+  const change = end - start;
+  const duration = Math.min(1500, Math.max(750, Math.abs(change) * 0.5));
+  const t0 = performance.now();
+  const ease = (t) => 1 - Math.pow(1 - t, 3);
+  const step = (now) => {
+    const p = Math.min(1, (now - t0) / duration);
+    window.scrollTo(0, start + change * ease(p));
+    if (p < 1) requestAnimationFrame(step);
+    else {
+      document.documentElement.style.scrollBehavior = "";
+      target.classList.add("arrive");
+      history.replaceState(null, "", "#oferta");
+    }
+  };
+  requestAnimationFrame(step);
+  return true;
+}
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a[href='#oferta']");
+  if (!link || !document.getElementById("oferta")) return;
+  event.preventDefault();
+  glideToOffer(link.dataset.serviciu || "");
 });
 
 document.querySelectorAll("[data-service-form]").forEach((form) => {
