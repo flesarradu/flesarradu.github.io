@@ -93,6 +93,49 @@ document.addEventListener("click", (event) => {
   glideToOffer(link.dataset.serviciu || "");
 });
 
+const highway = document.createElement("div");
+highway.className = "highway";
+highway.setAttribute("aria-hidden", "true");
+highway.innerHTML = `<div class="highway-lane"></div><div class="highway-truck"><svg viewBox="0 0 24 108">
+  <rect x="4" y="1" width="16" height="36" rx="2.5" fill="#89CFF0"/>
+  <path d="M12 5v28" stroke="#6eb8dc" stroke-width="1.2"/>
+  <rect x="10" y="37" width="4" height="3" rx="1" fill="#7ec4e4"/>
+  <rect x="4" y="40" width="16" height="36" rx="2.5" fill="#89CFF0"/>
+  <path d="M12 44v28" stroke="#6eb8dc" stroke-width="1.2"/>
+  <rect x="10" y="76" width="4" height="3" rx="1" fill="#7ec4e4"/>
+  <rect x="3.5" y="79" width="17" height="24" rx="3" fill="#A7D8F0"/>
+  <rect x="6" y="94" width="12" height="7" rx="1.4" fill="#f4fbfe"/>
+</svg></div>`;
+document.body.appendChild(highway);
+const lane = highway.querySelector(".highway-lane");
+const truck = highway.querySelector(".highway-truck");
+const services = document.getElementById("ce-facem");
+const footer = document.querySelector(".site-footer");
+const roadRange = () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const start = services ? Math.max(0, services.offsetTop - 80) : 0;
+  const end = footer ? Math.max(start, footer.offsetTop - window.innerHeight) : max;
+  return { start, end };
+};
+const placeTruck = () => {
+  const { start, end } = roadRange();
+  highway.classList.toggle("is-on", window.scrollY >= start && window.scrollY < end);
+  const span = Math.max(1, end - start);
+  const progress = Math.min(1, Math.max(0, (window.scrollY - start) / span));
+  const travel = highway.clientHeight - truck.offsetHeight;
+  truck.style.transform = `translateY(${progress * travel}px)`;
+  lane.style.setProperty("--dash", `${-progress * 120}px`);
+};
+placeTruck();
+window.addEventListener("scroll", placeTruck, { passive: true });
+window.addEventListener("resize", placeTruck);
+highway.addEventListener("click", (event) => {
+  const rect = highway.getBoundingClientRect();
+  const progress = Math.min(1, Math.max(0, (event.clientY - rect.top) / rect.height));
+  const { start, end } = roadRange();
+  window.scrollTo({ top: start + progress * (end - start), behavior: "smooth" });
+});
+
 document.querySelectorAll("[data-service-form]").forEach((form) => {
   const type = form.querySelector("[name=serviciu]");
   const car = form.querySelectorAll("[data-for=auto]");
