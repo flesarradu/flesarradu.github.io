@@ -94,7 +94,7 @@ def shell(title, description, path, body, active):
   <meta http-equiv="Expires" content="0">
   <script>
   (function () {
-    var build = "20260924d";
+    var build = "20260924e";
     fetch("/version.txt", { cache: "no-store" }).then(function (r) {
       return r.ok ? r.text() : "";
     }).then(function (text) {
@@ -111,7 +111,7 @@ def shell(title, description, path, body, active):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20260924d">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260924e">
 </head>
 <body class="{'home' if path == '/' else ''}">
 <header class="site-header">
@@ -123,7 +123,7 @@ def shell(title, description, path, body, active):
 </header>
 {body}
 {FOOT}
-<script src="/assets/js/main.js?v=20260924d"></script>
+<script src="/assets/js/main.js?v=20260924e"></script>
 </body>
 </html>
 """

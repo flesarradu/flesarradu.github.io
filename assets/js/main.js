@@ -96,15 +96,12 @@ document.addEventListener("click", (event) => {
 const highway = document.createElement("div");
 highway.className = "highway";
 highway.setAttribute("aria-hidden", "true");
-highway.innerHTML = `<div class="highway-lane"></div><div class="highway-truck"><svg viewBox="0 0 24 108">
-  <rect x="4" y="1" width="16" height="36" rx="2.5" fill="#89CFF0"/>
-  <path d="M12 5v28" stroke="#6eb8dc" stroke-width="1.2"/>
-  <rect x="10" y="37" width="4" height="3" rx="1" fill="#7ec4e4"/>
-  <rect x="4" y="40" width="16" height="36" rx="2.5" fill="#89CFF0"/>
-  <path d="M12 44v28" stroke="#6eb8dc" stroke-width="1.2"/>
-  <rect x="10" y="76" width="4" height="3" rx="1" fill="#7ec4e4"/>
-  <rect x="3.5" y="79" width="17" height="24" rx="3" fill="#A7D8F0"/>
-  <rect x="6" y="94" width="12" height="7" rx="1.4" fill="#f4fbfe"/>
+highway.innerHTML = `<div class="highway-lane"></div><div class="highway-truck"><svg viewBox="0 0 24 96">
+  <rect x="4" y="1" width="16" height="64" rx="2.5" fill="#89CFF0"/>
+  <path d="M12 6v54" stroke="#6eb8dc" stroke-width="1.2"/>
+  <rect x="10" y="65" width="4" height="3" rx="1" fill="#7ec4e4"/>
+  <rect x="3.5" y="68" width="17" height="24" rx="3" fill="#A7D8F0"/>
+  <rect x="6" y="83" width="12" height="7" rx="1.4" fill="#f4fbfe"/>
 </svg></div>`;
 document.body.appendChild(highway);
 const lane = highway.querySelector(".highway-lane");
