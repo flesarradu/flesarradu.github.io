@@ -89,6 +89,21 @@ def shell(title, description, path, body, active):
 <html lang="ro">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script>
+  (function () {
+    var build = "20260924d";
+    fetch("/version.txt", { cache: "no-store" }).then(function (r) {
+      return r.ok ? r.text() : "";
+    }).then(function (text) {
+      var remote = (text || "").trim();
+      if (!remote || remote === build || location.search.indexOf("v=" + remote) !== -1) return;
+      location.replace(location.pathname + location.search + (location.search ? "&" : "?") + "v=" + remote + location.hash);
+    }).catch(function () {});
+  })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title>
   <meta name="description" content="{description}">
@@ -96,7 +111,7 @@ def shell(title, description, path, body, active):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260924d">
 </head>
 <body class="{'home' if path == '/' else ''}">
 <header class="site-header">
@@ -108,7 +123,7 @@ def shell(title, description, path, body, active):
 </header>
 {body}
 {FOOT}
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js?v=20260924d"></script>
 </body>
 </html>
 """
