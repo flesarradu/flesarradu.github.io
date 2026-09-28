@@ -9,19 +9,18 @@ PAGES = json.loads(Path("/tmp/gis-pages.json").read_text())
 
 NAV = """
 <a href="/">Acasă</a>
-<a href="/despre-noi/">Despre noi</a>
+<a href="/#despre-noi">Despre noi</a>
 <div class="nav-drop">
-  <a href="/servicii/">Servicii</a>
+  <a href="/#servicii">Servicii</a>
   <menu>
-    <li><a href="/servicii/transport-autoturisme/">Transport autoturisme</a></li>
-    <li><a href="/servicii/transport-marfuri/">Transport mărfuri</a></li>
-    <li><a href="/servicii/intermediere-transport-marfuri-si-autoturisme/">Intermediere</a></li>
-    <li><a href="/servicii/depozitare-si-logistica/">Depozitare și logistică</a></li>
+    <li><a href="/#containere">Containere și colete</a></li>
+    <li><a href="/#autoturisme">Transport autoturisme</a></li>
+    <li><a href="/#intermediere">Intermediere</a></li>
+    <li><a href="/#depozitare">Depozitare și logistică</a></li>
   </menu>
 </div>
-<a href="/comanda-oferta/">Ofertă</a>
-<a href="/contact/">Contact</a>
-<a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+<a href="/#oferta">Contact</a>
+<a class="btn" href="/#oferta">Cere o ofertă</a>
 """
 
 FOOT = """
@@ -32,21 +31,12 @@ FOOT = """
       <p>Grup Impex S.R.L. Transport intern și internațional de autoturisme și mărfuri, din Sibiu.</p>
     </div>
     <div>
-      <h3>Servicii</h3>
-      <ul>
-        <li><a href="/servicii/transport-autoturisme/">Transport autoturisme</a></li>
-        <li><a href="/servicii/transport-marfuri/">Transport mărfuri</a></li>
-        <li><a href="/servicii/intermediere-transport-marfuri-si-autoturisme/">Intermediere</a></li>
-        <li><a href="/servicii/depozitare-si-logistica/">Depozitare și logistică</a></li>
-      </ul>
-    </div>
-    <div>
       <h3>Contact</h3>
       <ul>
         <li>Luni – Vineri, 08:00 – 16:00</li>
+        <li><a href="tel:+40754048794">+40 754 048 794</a></li>
         <li><a href="tel:+40740099080">+40 740 099 080</a></li>
         <li><a href="tel:+40741035347">+40 741 035 347</a></li>
-        <li><a href="tel:+40754048794">+40 754 048 794</a></li>
         <li><a href="mailto:office@gistransporturi.ro">office@gistransporturi.ro</a></li>
         <li>Sibiu, Str. Anul 1848 nr. 17</li>
       </ul>
@@ -54,8 +44,8 @@ FOOT = """
     <div>
       <h3>Social</h3>
       <ul>
-        <li><a href="https://www.facebook.com/GIStransporturi/" target="_blank" rel="noreferrer">Facebook</a></li>
-        <li><a href="https://www.instagram.com/grupimpexsrl/" target="_blank" rel="noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/GIStransporturi/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14.2 8.4V6.8c0-.9.5-1.3 1.4-1.3H18V3h-2.3C12.6 3 11 4.5 11 7v1.4H8.6V12H11v9h3.1v-9h2.5l.4-3.6h-2.9z"/></svg>Facebook</a></li>
+        <li><a href="https://www.instagram.com/grupimpexsrl/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>Instagram</a></li>
       </ul>
     </div>
   </div>
@@ -68,8 +58,8 @@ FOOT = """
     <span>© Grup Impex S.R.L.</span>
   </div>
 </footer>
-<a class="wa" href="https://wa.me/40740099080" aria-label="WhatsApp" target="_blank" rel="noreferrer">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l6-1.6A11 11 0 0 0 20.5 3.5zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.6.9.9-3.5-.2-.3A9.1 9.1 0 1 1 12 20.5zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.2-.3a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.9 14 14 0 0 0 1.5.6 3.6 3.6 0 0 0 1.6.1 2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3z"/></svg>
+<a class="wa" href="https://wa.me/40754048794" aria-label="WhatsApp" target="_blank" rel="noreferrer">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 """
 
@@ -80,8 +70,6 @@ def shell(title, description, path, body, active):
         ("/", "Acasă"),
         ("/despre-noi/", "Despre noi"),
         ("/servicii/", "Servicii"),
-        ("/comanda-oferta/", "Ofertă"),
-        ("/contact/", "Contact"),
     ]:
         if path == href or (href != "/" and path.startswith(href)):
             nav = nav.replace(f'href="{href}"', f'href="{href}" class="active"', 1)
@@ -94,7 +82,7 @@ def shell(title, description, path, body, active):
   <meta http-equiv="Expires" content="0">
   <script>
   (function () {
-    var build = "20260928a";
+    var build = "20260928ad";
     fetch("/version.txt", { cache: "no-store" }).then(function (r) {
       return r.ok ? r.text() : "";
     }).then(function (text) {
@@ -111,7 +99,7 @@ def shell(title, description, path, body, active):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20260928a">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260928ad">
 </head>
 <body class="{'home' if path == '/' else ''}">
 <header class="site-header">
@@ -123,7 +111,7 @@ def shell(title, description, path, body, active):
 </header>
 {body}
 {FOOT}
-<script src="/assets/js/main.js?v=20260928a"></script>
+<script src="/assets/js/main.js?v=20260928ad"></script>
 </body>
 </html>
 """
@@ -199,13 +187,13 @@ HOME = """
       <li>Simplu și rapid</li>
       <li>Costuri de transport corecte</li>
       <li>Asigurat CMR</li>
-      <li>În toată țara, dar și pe teritoriul Uniunii Europene</li>
+      <li>În toată țara, dar și pe teritoriul Uniunii Europene și al statelor membre EFTA</li>
     </ul>
     <div class="hero-actions reveal d4">
       <a class="btn" href="/comanda-oferta/">Cere o ofertă</a>
+      <a class="btn ghost" href="tel:+40754048794" style="color:white;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)">+40 754 048 794</a>
       <a class="btn ghost" href="tel:+40740099080" style="color:white;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)">+40 740 099 080</a>
       <a class="btn ghost" href="tel:+40741035347" style="color:white;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)">+40 741 035 347</a>
-      <a class="btn ghost" href="tel:+40754048794" style="color:white;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)">+40 754 048 794</a>
     </div>
   </div>
 </section>
@@ -279,8 +267,7 @@ HOME = """
       <p class="eyebrow">Flotă</p>
       <h2>Transportă rapid și în siguranță</h2>
       <p>Grup Impex S.R.L. asigură un transport rapid și în siguranță, punând la dispoziție o gamă largă de autoutilitare și autocamioane.</p>
-      <p>Transportăm autovehicule și mărfuri din afara țării în țară, cât și pe teritoriul Uniunii Europene, sigur, rapid și eficient.</p>
-      <a class="btn purple" href="/despre-noi/">Mai multe informații</a>
+      <p>Transportăm autovehicule și mărfuri din afara țării în țară, cât și pe teritoriul Uniunii Europene și al statelor membre EFTA, sigur, rapid și eficient.</p>
     </div>
   </div>
 </section>
@@ -288,7 +275,7 @@ HOME = """
   <div class="wrap">
     <div class="stats">
       <div class="stat inview"><b data-since="2001-08">0</b><span>ani de activitate în transporturi</span></div>
-      <div class="stat inview"><b data-count="110">0</b><span>angajați</span></div>
+      <div class="stat inview"><b>8,3</b><span>milioane km pe an</span></div>
       <div class="stat inview"><b data-count="14">0</b><span>țări pe rute regulate</span></div>
       <div class="stat inview"><b data-count="10">0</b><span>autoturisme pe platformă</span></div>
     </div>
@@ -297,7 +284,7 @@ HOME = """
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow">De ce GIS</p>
-    <h2>Același drum, mai liniștit.</h2>
+    <h2>Conectăm Europa. Livrăm încredere.</h2>
     <div class="reasons">
       <article class="reason inview"><em>Oriunde în Europa</em><p>Curse regulate și curse interne, cu frecvență ridicată.</p></article>
       <article class="reason inview"><em>Preț corect</em><p>Costul ține de rută, dimensiune și greutate. Îl afli dintr-o cerere de ofertă.</p></article>
@@ -340,7 +327,7 @@ HOME = """
       <p class="eyebrow">Întrebări frecvente</p>
       <h2>Înainte de cursă.</h2>
       <div class="faq">
-        <details open><summary>Cum pot să transport o mașină din UE către România?</summary><p>Se face o cerere cu ajutorul formularului de pe pagina Comandă/Ofertă și noi îți vom răspunde în cel mai scurt timp.</p></details>
+        <details open><summary>Cum pot să transport o mașină din Uniunea Europeană și statele membre EFTA către România?</summary><p>Se face o cerere cu ajutorul formularului de pe pagina Comandă/Ofertă și noi îți vom răspunde în cel mai scurt timp.</p></details>
         <details><summary>Cât costă să transport o mașină?</summary><p>Costul unui transport diferă în funcție de locul de ridicare și locul de livrare, dar și în funcție de dimensiunile și greutatea acesteia. Pentru a afla, completează o cerere de ofertă.</p></details>
         <details><summary>Cum pot să îmi transport o mașină în țară?</summary><p>Dacă ai o mașină pe care vrei să o transporți dintr-o locație în alta pe teritoriul țării, te putem ajuta cu autocamioanele noastre sau ale partenerilor noștri.</p></details>
         <details><summary>Am marfă, cu cine pot să o transport?</summary><p>În funcție de nevoile tale, marfa va fi transportată cât mai rapid, atât paletată, cât și ca un colet singular.</p></details>
@@ -349,7 +336,7 @@ HOME = """
     <div class="inview">
       <p class="eyebrow">Contactează-ne</p>
       <h2>Luni – vineri, 8–16.</h2>
-      <p><a href="tel:+40740099080">+40 740 099 080</a><br><a href="tel:+40741035347">+40 741 035 347</a><br><a href="tel:+40754048794">+40 754 048 794</a><br><a href="mailto:office@gistransporturi.ro">office@gistransporturi.ro</a><br>Sibiu, Str. Anul 1848 nr. 17, județul Sibiu</p>
+      <p><a href="tel:+40754048794">+40 754 048 794</a><br><a href="tel:+40740099080">+40 740 099 080</a><br><a href="tel:+40741035347">+40 741 035 347</a><br><a href="mailto:office@gistransporturi.ro">office@gistransporturi.ro</a><br>Sibiu, Str. Anul 1848 nr. 17, județul Sibiu</p>
       <a class="btn" href="/contact/">Scrie-ne</a>
     </div>
   </div>
@@ -498,7 +485,7 @@ CONTACT = """
     <p class="eyebrow" style="color:#9fdfff">Date contact</p>
     <h2>GRUP IMPEX SRL</h2>
     <p>Sibiu, Str. Anul 1848 nr. 17, județul Sibiu</p>
-    <p><a href="tel:+40740099080">+40 740 099 080</a><br><a href="tel:+40741035347">+40 741 035 347</a><br><a href="tel:+40754048794">+40 754 048 794</a></p>
+    <p><a href="tel:+40754048794">+40 754 048 794</a><br><a href="tel:+40740099080">+40 740 099 080</a><br><a href="tel:+40741035347">+40 741 035 347</a></p>
     <p><a href="mailto:office@gistransporturi.ro">office@gistransporturi.ro</a></p>
     <p>Luni – Vineri, 08:00 – 16:00</p>
   </div>
@@ -532,7 +519,7 @@ def legal_page(title, path, inner):
 
 
 pages = {
-    "index.html": shell("Acasă - GIS Transporturi", "Transport autoturisme și mărfuri în România și Uniunea Europeană. Grup Impex S.R.L., Sibiu.", "/", HOME, "/"),
+    "index.html": shell("Acasă - GIS Transporturi", "Transport autoturisme și mărfuri în România, Uniunea Europeană și statele membre EFTA. Grup Impex S.R.L., Sibiu.", "/", HOME, "/"),
     "despre-noi/index.html": shell("Despre noi - GIS Transporturi", "Grup Impex S.R.L., înființată în 2001, transport mărfuri și autoturisme.", "/despre-noi/", ABOUT, ""),
     "servicii/index.html": shell("Servicii - GIS Transporturi", "Transport autoturisme, mărfuri, intermediere, depozitare și logistică.", "/servicii/", SERVICES, ""),
     "servicii/transport-autoturisme/index.html": shell("Transport autoturisme - GIS Transporturi", "Transport mașini pe platformă, 1 până la 10 autoturisme, în Europa.", "/servicii/transport-autoturisme/", AUTO, ""),
@@ -540,7 +527,7 @@ pages = {
     "servicii/intermediere-transport-marfuri-si-autoturisme/index.html": shell("Intermediere - GIS Transporturi", "Intermediere transport mărfuri și autoturisme, cu asigurare.", "/servicii/intermediere-transport-marfuri-si-autoturisme/", BROKER, ""),
     "servicii/depozitare-si-logistica/index.html": shell("Depozitare și logistică - GIS Transporturi", "Depozitare autoturisme și mărfuri în Sibiu.", "/servicii/depozitare-si-logistica/", STORE, ""),
     "comanda-oferta/index.html": shell("Comandă / Ofertă - GIS Transporturi", "Cere o ofertă de transport sau depozitare.", "/comanda-oferta/", OFFER, ""),
-    "contact/index.html": shell("Contact - GIS Transporturi", "GRUP IMPEX SRL, Sibiu, Str. Anul 1848 nr. 17. Telefon +40 740 099 080.", "/contact/", CONTACT, ""),
+    "contact/index.html": shell("Contact - GIS Transporturi", "GRUP IMPEX SRL, Sibiu, Str. Anul 1848 nr. 17. Telefon +40 754 048 794.", "/contact/", CONTACT, ""),
 }
 
 decl = legal_html("declaratie-privind-datele-cu-caracter-personal")

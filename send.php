@@ -1,4 +1,5 @@
 <?php
+session_start();
 header("Content-Type: application/json; charset=utf-8");
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -9,6 +10,16 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 if (!empty($_POST["company"])) {
     echo json_encode(["ok" => true]);
+    exit;
+}
+
+$given = strtoupper(preg_replace("/\s+/", "", (string) ($_POST["captcha"] ?? "")));
+$expected = (string) ($_SESSION["captcha"] ?? "");
+$fresh = (time() - (int) ($_SESSION["captcha_at"] ?? 0)) < 600;
+unset($_SESSION["captcha"], $_SESSION["captcha_at"]);
+if ($expected === "" || !$fresh || strlen($given) !== strlen($expected) || !hash_equals($expected, $given)) {
+    http_response_code(422);
+    echo json_encode(["ok" => false, "error" => "captcha"]);
     exit;
 }
 
