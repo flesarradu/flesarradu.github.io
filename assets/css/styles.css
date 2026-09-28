@@ -318,6 +318,32 @@ body.home .site-header:not(.scrolled) .nav-drop menu a:hover { color: var(--purp
 }
 .highway-truck svg { width: 100%; height: 100%; display: block; }
 
+.service-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+.service-board-intro { grid-row: span 2; display: flex; flex-direction: column; justify-content: center; padding-right: 18px; }
+.service-board-intro p:not(.eyebrow) { color: var(--muted); }
+.service-board-intro .btn { align-self: flex-start; margin-top: 8px; }
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 24px 22px;
+  box-shadow: 0 18px 40px rgba(76, 36, 96, 0.08);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.offer-card:hover { transform: translateY(-3px); border-color: rgba(0, 159, 227, 0.55); }
+.offer-card-title { display: flex; align-items: center; gap: 12px; }
+.offer-card svg { width: 28px; height: 28px; flex: none; fill: none; stroke: var(--cyan); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.offer-card h3 { font-size: 22px; margin: 0; }
+.offer-card p { margin: 0; color: var(--muted); font-size: 15px; }
+
 .reveal { opacity: 0; transform: translateY(24px); animation: rise 0.8s ease forwards; }
 .reveal.d2 { animation-delay: 0.12s; }
 .reveal.d3 { animation-delay: 0.24s; }
@@ -342,7 +368,8 @@ body.home .site-header:not(.scrolled) .nav.open a,
 body.home .site-header:not(.scrolled) .nav.open a:hover { color: var(--ink); }
 body.home .site-header:not(.scrolled) .nav.open a.active { color: var(--cyan-deep); }
   .nav-drop menu { position: static; display: grid; box-shadow: none; min-width: 0; padding: 0 0 0 10px; }
-  .split, .stats, .reasons, .quotes, .contact-grid, .two-col, .foot-grid, .form .row { grid-template-columns: 1fr; }
+  .split, .stats, .reasons, .quotes, .contact-grid, .two-col, .foot-grid, .form .row, .service-board { grid-template-columns: 1fr; }
+  .service-board-intro { grid-row: auto; padding-right: 0; }
   .service summary { grid-template-columns: 1fr 44px; }
   .service img { grid-column: 1 / -1; width: 100%; height: 190px; }
   .service-panel-inner { margin-left: 0; grid-template-columns: 1fr; justify-items: start; }
